@@ -29,7 +29,7 @@ class WeaponTilterInventory : Inventory
 
 	static const string SCOPED[] =
 	{
-		"PB_Railgun"
+		"PB_Railgun", "BDPBattleRifle", "PB_CSSG"
 	};
 	
 	default
