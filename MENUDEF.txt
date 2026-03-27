@@ -1,6 +1,6 @@
 OptionMenu "WeaponTiltOptions" 
 {
-	Title "$UWT_TITL", gold
+	Title "$UWT_TITL"
    
     StaticText ""
 
