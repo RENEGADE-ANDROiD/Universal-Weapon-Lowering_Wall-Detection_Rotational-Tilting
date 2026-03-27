@@ -13,7 +13,7 @@ This is code licensed under Unlicense, so do whatever you want with it, i don't 
 class WeaponTilterInventory : Inventory
 {
 	double currentRoll, crABS, aVelocity, playerVel, adjustedCrABS;
-	float rResistance, rVelocity, rLimit, rWallLoweringAmount;
+	float rResistance, rVelocity, rLimit, rWallLoweringAmount, loweringIntensity;  // <-- added loweringIntensity
 	vector2 direction, velocityUnit;
 	int currentTickCount;
 	bool limit, offset, lowering, wallDetection;
@@ -79,7 +79,7 @@ class WeaponTilterInventory : Inventory
 	}
 	
 	// Wall detection function
-	bool bFacingWall(double distance = 24, double offsetZ = -12)
+	bool bFacingWall(double distance = 48, double offsetZ = -12)
 	{
 		FLineTraceData wallcheck;
 		owner.LineTrace(
@@ -141,6 +141,7 @@ class WeaponTilterInventory : Inventory
 				rVelocity = cvar.getcvar("wt_rollvelocity", owner.player).getfloat();
 				rLimit = cvar.getcvar("wt_rollcap", owner.player).getfloat();
 				rWallLoweringAmount = cvar.getcvar("wt_walllowering", owner.player).getfloat();
+				loweringIntensity = cvar.getcvar("wt_lowering_intensity", owner.player).getfloat();   // <-- added
 				
 				limit = cvar.getcvar("wt_cap", owner.player).getbool();
 				offset = cvar.getcvar("wt_offset", owner.player).getbool();
@@ -169,6 +170,9 @@ class WeaponTilterInventory : Inventory
 					// More movement = more lowering, scaled by velocity
 					targetLowering = min(22.0, (owner.vel.length() * 1.5) + sidewaysMovement * 0.05);
 				}
+				
+				// Apply intensity multiplier   // <-- new
+				targetLowering *= clamp(loweringIntensity, 0.0, 2.0);
 				
 				// Handle wall detection lowering
 				if(wallDetection && bFacingWall())

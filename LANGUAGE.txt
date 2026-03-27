@@ -1,0 +1,25 @@
+[enu default]
+UWT_TITL = "Universal Weapon Lowering, Wall-Detection & Rotational-Tilting";
+UWT_TIT2 = "Weapon Lowering, Tilt Strafe Rotate"
+
+UWT_VELOCITY = "Velocity";
+UWT_RESISTANCE = "Resistance";
+
+UWT_DEBUG = "Debug (WARNING: Console Spam)";
+UWT_CAP = "Cap Roll";
+UWT_CAPAMOUNT = "Cap Amount";
+
+UWT_OFFSET = "Offset Sprite when Strafing";
+UWT_LOWERING_INTENSITY = "Strafe Lowering Intensity";
+UWT_WALLLOWERING = "Wall Lowering Amount";[enu default]
+
+UWT_VELOCITY = "Velocity";
+UWT_RESISTANCE = "Resistance";
+
+UWT_DEBUG = "Debug (WARNING: Console Spam)";
+UWT_CAP = "Cap Roll";
+UWT_CAPAMOUNT = "Cap Amount";
+
+UWT_OFFSET = "Offset Sprite when Strafing";
+UWT_LOWERING_INTENSITY = "Strafing Lowering Intensity";
+UWT_WALLLOWERING = "Wall Lowering Amount";
