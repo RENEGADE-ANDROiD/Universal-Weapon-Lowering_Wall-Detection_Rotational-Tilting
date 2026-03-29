@@ -39,7 +39,7 @@ class WeaponTilterInventory : Inventory
     // Weapon exclusion arrays (example – adjust to your own weapons)
     static const string NO_ROTATE[] =
     {
-        "PB_Minigun", "PB_CryoRifle", "PB_NukageBarrel", "Stormcast"
+        "PB_Minigun", "PB_CryoRifle", "PB_NukageBarrel", "BattleAxe", "DragonSlayer", "Stormcast"
     };
 
     static const string SCOPED[] =
