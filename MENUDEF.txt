@@ -20,7 +20,7 @@ OptionMenu "WeaponTiltOptions"
     StaticText "How much extra the weapon lowers when facing a wall.", "Teal"
     StaticText ""
 
-    Option "$UWT_CAP", "wt_cap", "OnOff", white
+    Option "$UWT_CAP", "wt_cap", "OnOff"
 
     Slider "$UWT_CAPAMOUNT", "wt_rollcap", 1, 5, 0.5, 2
 
